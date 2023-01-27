@@ -32,4 +32,5 @@ public class Product {
     public double getQuantity() {
         return quantity;
     }
+
 }

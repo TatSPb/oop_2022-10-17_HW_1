@@ -1,7 +1,8 @@
 import Products.Product;
+import Recipes.Recipe;
 
 import static Products.ProductList.printProductList;
-import static Products.ProductList.productList;
+import static Recipes.RecipeCollection.printRecipeCollection;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,5 +14,16 @@ public class Main {
         Product oliveOil = new Product("Масло оливковое", 1000.00, 0.05);
 
         printProductList();
+
+        System.out.println();
+        Recipe vegetarianSalad = new Recipe("Овощной салат");
+
+        vegetarianSalad.addProductToRecipe(cucumber, 0.3);
+        vegetarianSalad.addProductToRecipe(tomato, 0.3);
+        vegetarianSalad.addProductToRecipe(sweetPepper, 0.3);
+        vegetarianSalad.addProductToRecipe(dill, 0.03);
+        vegetarianSalad.addProductToRecipe(oliveOil, 0.05);
+
+        printRecipeCollection();
     }
 }

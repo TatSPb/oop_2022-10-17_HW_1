@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ProductList {
-
     public static Set<Product> productList = new HashSet<>();
 
     public static void addProductToList(Product newProduct) {
@@ -20,6 +19,8 @@ public class ProductList {
             System.out.println(product.getName() + ", цена: " + product.getPrice() + " руб/кг," + " требуемое количество: "+ product.getQuantity() + " кг.");
         }
     }
-
+    public static Set<Product> getProductList() {
+        return productList;
+    }
 
 }
